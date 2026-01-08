@@ -1,0 +1,74 @@
+{
+  "datasets": [
+    {
+      "name": "e1caeeaf",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "select * from sales_data;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "0da68be3",
+      "displayName": "page1",
+      "layout": [
+        {
+          "widget": {
+            "name": "f797e6d5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e1caeeaf",
+                  "fields": [
+                    {
+                      "name": "product",
+                      "expression": "`product`"
+                    },
+                    {
+                      "name": "sum(unit_price)",
+                      "expression": "SUM(`unit_price`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "product",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(unit_price)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 5,
+            "height": 8
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
