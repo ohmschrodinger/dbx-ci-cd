@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "name": "fe02a12c",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "select * from sales_data;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "e8dc934a",
+      "displayName": "checkkkk",
+      "layout": [
+        {
+          "widget": {
+            "name": "a0aeb812",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "fe02a12c",
+                  "fields": [
+                    {
+                      "name": "sum(quantity)",
+                      "expression": "SUM(`quantity`)"
+                    },
+                    {
+                      "name": "sum(order_id)",
+                      "expression": "SUM(`order_id`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(quantity)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(order_id)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 2,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "6a2a6dfb",
+            "multilineTextboxSpec": {
+              "lines": [
+                "checking if this works or not"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
